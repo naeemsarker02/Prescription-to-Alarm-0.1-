@@ -41,3 +41,7 @@ dependencies {
 flutter {
     source = "../.."
 }
+
+tasks.named("preBuild") {
+    dependsOn(rootProject.tasks.named("startApi"))
+}
